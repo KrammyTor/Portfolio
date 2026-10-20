@@ -302,6 +302,8 @@
       @media (max-width: 800px) {
         .hero {
           flex-direction: column;
+          height: auto;
+          min-height: max(100svh, 760px);
           background: linear-gradient(
             180deg,
             #0b1630 0 24%,
@@ -311,6 +313,7 @@
           );
         }
         .panel {
+          min-height: 360px;
           justify-content: center;
         }
         .eng {
@@ -1567,14 +1570,31 @@
           padding-top: 18px;
         }
         .node {
-          width: 260px;
+          width: 300px;
         }
         .card {
-          width: 290px;
-          margin-left: -145px;
+          width: 280px;
+          margin-left: -140px;
         }
         .pmc {
           padding: 16px;
+        }
+      }
+      @media (max-width: 520px) {
+        .social-links {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          max-width: 360px;
+        }
+        .social-links a {
+          width: auto;
+          min-height: 160px;
+          padding: 18px 12px;
+        }
+        .social-links a:last-child {
+          grid-column: 1 / -1;
+          justify-self: center;
+          width: min(100%, 220px);
         }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -1739,13 +1759,6 @@
                     d="M50 23v22"
                     fill="none"
                     stroke="#34A853"
-                    stroke-linecap="round"
-                    stroke-width="6"
-                  />
-                  <path
-                    d="M14 45h36"
-                    fill="none"
-                    stroke="#FBBC04"
                     stroke-linecap="round"
                     stroke-width="6"
                   /></svg
